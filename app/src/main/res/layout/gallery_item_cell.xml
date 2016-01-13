@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="3dp">
+
+    <com.moreno.imgurviewer.widget.SquareImageView
+        android:id="@+id/image_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_rounded_rectangle"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/app_name"/>
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/clear_white"
+        android:gravity="center"
+        android:padding="15dp"
+        android:alpha=".6"
+        android:singleLine="true"
+        android:background="@color/dark_gray"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="5dp"/>
+
+
+</FrameLayout>

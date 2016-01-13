@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="white">#fbfbfb</color>
+    <color name="clear_white">#ffffff</color>
+    <color name="dark_white">#f5f5f5</color>
+    <color name="black">#010101</color>
+    <color name="gray_dialogs">#939598</color>
+    <color name="translucent_gray">#bababa</color>
+    <color name="light_gray">#bebebe</color>
+    <color name="facebook_blue">#3c5698</color>
+    <color name="light_blue">#59bad2</color>
+    <color name="blue_dialogs">#55BAD2</color>
+    <color name="dark_green">#40b84a</color>
+    <color name="dark_gray">#666666</color>
+    <color name="dark_orange">#ea731c</color>
+    <color name="dark_orange_tapped">#e88740</color>
+    <color name="red_delete">#ee1c24</color>
+    <color name="translucent_white">#75FFFFFF</color>
+    <color name="charcoal">#58595B</color>
+</resources>
