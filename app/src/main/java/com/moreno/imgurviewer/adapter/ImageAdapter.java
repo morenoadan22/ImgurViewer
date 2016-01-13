@@ -3,6 +3,7 @@ package com.moreno.imgurviewer.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,9 +26,9 @@ import java.util.ArrayList;
  * is intended to hold {@link com.moreno.imgurviewer.models.GalleryItem GalleryItems}
  */
 public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder>{
+    private static final String LOG_TAG = ImageAdapter.class.getSimpleName();
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-
         public TextView textTitle;
         public ImageView image;
 
@@ -87,11 +88,13 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder>{
 
     public void setData(ArrayList<GalleryItem> items){
         this.galleryItems = new ArrayList<>();
+        Log.d(LOG_TAG, "gallery items original count: " + items.size());
         for( GalleryItem item : items ){
             if( item.getLink() != null && !item.getLink().isEmpty() ){
                 galleryItems.add(item);
             }
         }
+        Log.d(LOG_TAG, "gallery with empty link string: " + (items.size() - galleryItems.size()));
         notifyDataSetChanged();
     }
 

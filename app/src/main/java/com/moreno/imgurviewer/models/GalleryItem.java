@@ -5,7 +5,6 @@ import android.os.Parcelable;
 
 import com.moreno.imgurviewer.Common;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
@@ -22,11 +21,11 @@ public class GalleryItem implements Parcelable{
     private String type;
     private String link;
 
-    public GalleryItem(JSONObject json) throws JSONException{
-        setId(json.getString(Common.GALLERY_ID));
-        setTitle(json.getString(Common.GALLERY_TITLE));
-        setType(json.getString(Common.GALLERY_TYPE));
-        setLink(json.getString(Common.GALLERY_LINK));
+    public GalleryItem(JSONObject json) {
+        setId(json.optString(Common.GALLERY_ID, ""));
+        setTitle(json.optString(Common.GALLERY_TITLE, ""));
+        setType(json.optString(Common.GALLERY_TYPE, ""));
+        setLink(json.optString(Common.GALLERY_LINK, ""));
     }
 
     public boolean equals(Object o){

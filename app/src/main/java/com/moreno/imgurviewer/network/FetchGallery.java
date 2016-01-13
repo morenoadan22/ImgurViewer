@@ -43,9 +43,9 @@ public class FetchGallery extends BaseVolleyTask<ArrayList<GalleryItem>>{
 
     public LinkedHashSet<String> getParams(){
         LinkedHashSet<String> paramSet = new LinkedHashSet<>(3);
-        paramSet.add(section == null ? "hot" : section);
-        paramSet.add(sort == null ? "viral" : sort);
-        paramSet.add(String.valueOf(page));
+//        paramSet.add(section == null ? "hot" : section);
+//        paramSet.add(sort == null ? "time" : sort);
+//        paramSet.add(String.valueOf(page));
         return paramSet;
     }
 
