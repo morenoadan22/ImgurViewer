@@ -22,15 +22,11 @@ public class GalleryItem implements Parcelable{
     private String type;
     private String link;
 
-    public GalleryItem(JSONObject json){
-        try {
-            setId(json.getString(Common.GALLERY_ID));
-            setTitle(json.getString(Common.GALLERY_TITLE));
-            setType(json.getString(Common.GALLERY_TYPE));
-            setLink(json.getString(Common.GALLERY_LINK));
-        }catch(JSONException je){
-            je.printStackTrace();
-        }
+    public GalleryItem(JSONObject json) throws JSONException{
+        setId(json.getString(Common.GALLERY_ID));
+        setTitle(json.getString(Common.GALLERY_TITLE));
+        setType(json.getString(Common.GALLERY_TYPE));
+        setLink(json.getString(Common.GALLERY_LINK));
     }
 
     public boolean equals(Object o){

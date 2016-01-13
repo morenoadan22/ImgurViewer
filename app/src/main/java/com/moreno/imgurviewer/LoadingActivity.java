@@ -36,11 +36,6 @@ public class LoadingActivity extends Activity implements TaskListener<ArrayList<
         setContentView(R.layout.activity_loading);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.gallery_grid);
-        mRecyclerView.setHasFixedSize(true);
-
-        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 2);
-        mRecyclerView.setLayoutManager(mLayoutManager);
-
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener(){
             @Override
@@ -64,6 +59,9 @@ public class LoadingActivity extends Activity implements TaskListener<ArrayList<
         mSwipeRefreshLayout.setRefreshing(false);
         ImageAdapter adapter = new ImageAdapter(LoadingActivity.this);
         adapter.setData(items);
+        mRecyclerView.setHasFixedSize(true);
+        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 2);
+        mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(adapter);
     }
 
