@@ -45,13 +45,9 @@ public class GalleryItemTest {
         assertEquals("image/jpeg", item.getType());
         assertEquals("http://i.imgur.com/SbBGk.jpg", item.getLink());
 
-        try {
-            JSONObject mockEmptyJSON = mock(JSONObject.class);
-            item = new GalleryItem(mockEmptyJSON);
-        }catch(JSONException je){
-            assertNotNull(je);
-            System.out.println(je.getMessage());
-        }
+        JSONObject mockEmptyJSON = mock(JSONObject.class);
+        item = new GalleryItem(mockEmptyJSON);
+        assertNotNull(item);
     }
 
 
