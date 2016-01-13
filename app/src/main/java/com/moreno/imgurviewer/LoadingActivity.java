@@ -20,6 +20,10 @@ import java.util.ArrayList;
 
 /**
  * Created by adan on 1/11/16.
+ * <br />
+ * <br />
+ * Displays a view containing a grid of thumbnails that is dynamically populated
+ * and rendered as the user scrolls through
  */
 public class LoadingActivity extends Activity implements TaskListener<ArrayList<GalleryItem>>{
     private static final String LOG_TAG = LoadingActivity.class.getSimpleName();

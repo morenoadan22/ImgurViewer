@@ -25,6 +25,10 @@ import java.util.Set;
 
 /**
  * Created by adan on 1/11/16.
+ * <br />
+ * <br />
+ * Abstract class that handles {@link com.android.volley.RequestQueue Volley Request Queue} management
+ * and response handling including initial parsing, redirection, and caching
  */
 public abstract class BaseVolleyTask<E> implements Response.Listener<String>, Response.ErrorListener, TaskListener<String> {
     private static final String TAG = BaseVolleyTask.class.getSimpleName();

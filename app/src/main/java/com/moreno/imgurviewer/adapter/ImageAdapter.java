@@ -19,6 +19,10 @@ import java.util.ArrayList;
 
 /**
  * Created by adan on 1/11/16.
+ * <br />
+ * <br />
+ * A recycler view adapter that implements the view holder pattern. This class
+ * is intended to hold {@link com.moreno.imgurviewer.models.GalleryItem GalleryItems}
  */
 public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder>{
 
@@ -68,7 +72,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder>{
             Picasso.with(context)
                     .load(item.getLink())
                     .error(R.color.charcoal)
-                    .placeholder(R.drawable.animation_rotate)
+                    .placeholder(R.anim.animation_rotate)
                     .into(viewHolder.image);
         }catch(Exception e){
             viewHolder.image.setImageResource(R.color.charcoal);

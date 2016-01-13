@@ -15,10 +15,11 @@ import java.util.LinkedHashSet;
 
 /**
  * Created by adan on 1/11/16.
+ * <br />
+ * <br />
+ * A class that handles the api call that retrieves the gallery from {@link com.moreno.imgurviewer.Common#BASE_URL Imgur}
  */
 public class FetchGallery extends BaseVolleyTask<ArrayList<GalleryItem>>{
-
-
 
     private String section;//section optional hot | top | user - defaults to hot
     private String sort;//sort optional viral | top | time | rising (only available with user section) - defaults to viral
@@ -59,10 +60,7 @@ public class FetchGallery extends BaseVolleyTask<ArrayList<GalleryItem>>{
         try {
             JSONArray data = response.getJSONArray("data");
             for( int i = 0; i < data.length(); i++ ){
-                JSONObject jItem = data.getJSONObject(i);
-//                if( !jItem.getString("type").contains("gif") ) {
-                    items.add(new GalleryItem(data.getJSONObject(i)));
-//                }
+                items.add(new GalleryItem(data.getJSONObject(i)));
             }
         } catch (JSONException e) {
             e.printStackTrace();

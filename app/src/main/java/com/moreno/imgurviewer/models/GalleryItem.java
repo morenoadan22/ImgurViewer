@@ -10,6 +10,10 @@ import org.json.JSONObject;
 
 /**
  * Created by adan on 1/11/16.
+ * <br />
+ * <br />
+ * Class that encapsulates the critical information necessary from the
+ * {@link com.moreno.imgurviewer.network.FetchGallery FetchGallery} api response
  */
 public class GalleryItem implements Parcelable{
 

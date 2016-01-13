@@ -14,8 +14,13 @@ import java.util.List;
 
 /**
  * Created by adan on 1/12/16.
+ * <br />
+ * <br />
+ * Activity class which displays a full-screen gallery view
+ * with swipe recognition to traverse through the images
  */
 public class ImageDetailActivity extends FragmentActivity {
+
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_detail);
@@ -32,7 +37,7 @@ public class ImageDetailActivity extends FragmentActivity {
 
         LargeImageAdapter pageAdapter = new LargeImageAdapter(getSupportFragmentManager(), fragmentList);
         ViewPager imagePager = (ViewPager) findViewById(R.id.pager_gallery);
-        imagePager.setOffscreenPageLimit(pageAdapter.getCount() / 4); //Load a quarter of the pages to improver performance
+        imagePager.setOffscreenPageLimit(pageAdapter.getCount() / 4); //Load a quarter of the pages to improve performance
         imagePager.setAdapter(pageAdapter);
         imagePager.setClipChildren(false);
 

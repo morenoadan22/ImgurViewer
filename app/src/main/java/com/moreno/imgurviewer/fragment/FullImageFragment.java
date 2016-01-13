@@ -17,6 +17,8 @@ import com.squareup.picasso.Picasso;
 /**
  * Created by adan on 1/12/16.
  *
+ * Fragment class that renders single static image or gif content inside a full
+ * screen view
  */
 public class FullImageFragment extends Fragment{
 
@@ -49,7 +51,7 @@ public class FullImageFragment extends Fragment{
                 webViewScreenView.setVisibility(View.GONE);
                 Picasso.with(context)
                         .load(item.getLink())
-                        .placeholder(R.drawable.animation_rotate)
+                        .placeholder(R.anim.animation_rotate)
                         .into(imageFullScreenView);
             }else{
                 webViewScreenView.setVisibility(View.VISIBLE);

@@ -6,6 +6,9 @@ import android.widget.ImageView;
 
 /**
  * Created by adan on 1/12/16.
+ * <br />
+ * <br />
+ * Custom View class that re-sizes the content into specified dimensions
  */
 public class SquareImageView extends ImageView {
 

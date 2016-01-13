@@ -2,6 +2,10 @@ package com.moreno.imgurviewer;
 
 /**
  * Created by adan on 1/11/16.
+ * <br />
+ * <br />
+ * Contains commonly used variables throughout the app, all which
+ * are declared final and static
  */
 public class Common {
 
