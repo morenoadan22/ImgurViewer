@@ -8,6 +8,7 @@ import android.support.v4.view.ViewPager;
 import com.moreno.imgurviewer.adapter.LargeImageAdapter;
 import com.moreno.imgurviewer.fragment.FullImageFragment;
 import com.moreno.imgurviewer.models.GalleryItem;
+import com.moreno.imgurviewer.widget.DepthPageTransformer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +38,7 @@ public class ImageDetailActivity extends FragmentActivity {
 
         LargeImageAdapter pageAdapter = new LargeImageAdapter(getSupportFragmentManager(), fragmentList);
         ViewPager imagePager = (ViewPager) findViewById(R.id.pager_gallery);
+        imagePager.setPageTransformer(true, new DepthPageTransformer());
         imagePager.setOffscreenPageLimit(pageAdapter.getCount() / 4); //Load a quarter of the pages to improve performance
         imagePager.setAdapter(pageAdapter);
         imagePager.setClipChildren(false);
