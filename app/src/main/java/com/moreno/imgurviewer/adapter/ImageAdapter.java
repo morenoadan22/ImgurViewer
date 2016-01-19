@@ -90,7 +90,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder>{
         this.galleryItems = new ArrayList<>();
         Log.d(LOG_TAG, "gallery items original count: " + items.size());
         for( GalleryItem item : items ){
-            if( item.getLink() != null && !item.getLink().isEmpty() ){
+            if( item.getLink() != null && !item.getLink().isEmpty() && !item.getType().isEmpty() ){
                 galleryItems.add(item);
             }
         }
